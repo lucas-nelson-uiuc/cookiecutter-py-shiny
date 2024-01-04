@@ -32,7 +32,7 @@ app_ui = ui.page_navbar(
         )
     ],
     shinyswatch.get_theme(f"{{{ cookiecutter.bootswatch_theme }}}"),
-    title=f"{{{ cookiecutter.shiny_app_name }}}",
+    title=f"{{{ cookiecutter.package_name }}}",
     fluid=True,
     position='static-top'
 )
