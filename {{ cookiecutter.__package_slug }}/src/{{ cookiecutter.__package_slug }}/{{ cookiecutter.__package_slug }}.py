@@ -31,7 +31,7 @@ app_ui = ui.page_navbar(
             align='right'
         )
     ],
-    shinyswatch.get_theme(PACKAGE_NAME),
+    shinyswatch.get_theme("{{ cookiecutter.bootswatch_theme }}"),
     title=PACKAGE_NAME,
     fluid=True,
     position='static-top'
