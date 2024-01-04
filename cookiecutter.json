@@ -1,7 +1,7 @@
 {
   "author_name": "Monty Python",
   "package_name": "mypkg",
-  "__package_slug": "{{ cookiecutter.shiny_app_name|lower|replace(' ', '_')|replace('-', '_') }}",
+  "__package_slug": "{{ cookiecutter.package_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "package_short_description": "Short description of package",
   "package_version": "0.1.0",
   "python_version": "3.9",
