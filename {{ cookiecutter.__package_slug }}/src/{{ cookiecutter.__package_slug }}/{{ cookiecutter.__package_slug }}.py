@@ -7,7 +7,7 @@ from templates.pages.navbar_help import (
     contact_the_team
 )
 
-
+PACKAGE_NAME = {{ cookiecutter.package_name }}
 app_ui = ui.page_navbar(
     [
         ui.nav_panel('Home', ui.page_fluid('something')),
@@ -16,7 +16,7 @@ app_ui = ui.page_navbar(
         ui.nav_menu(
             'Help',
             'Navigation',
-            ui.nav_panel(f'About {{{ cookiecutter.package_name }}}', ui.page_fluid('inspiration from Polars homepage')),
+            ui.nav_panel(f'About { PACKAGE_NAME }', ui.page_fluid('inspiration from Polars homepage')),
             ui.nav_panel('User Guide', ui.page_fluid('inspiration from Polars')),
             ui.nav_panel('Frequently Asked Questions', ui.page_fluid('')),
             '-----',
@@ -31,8 +31,8 @@ app_ui = ui.page_navbar(
             align='right'
         )
     ],
-    shinyswatch.get_theme(f"{{{ cookiecutter.bootswatch_theme }}}"),
-    title=f"{{{ cookiecutter.package_name }}}",
+    shinyswatch.get_theme(PACKAGE_NAME),
+    title=PACKAGE_NAME,
     fluid=True,
     position='static-top'
 )
