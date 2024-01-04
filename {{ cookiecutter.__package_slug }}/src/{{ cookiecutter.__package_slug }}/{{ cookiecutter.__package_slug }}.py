@@ -13,7 +13,7 @@ app_ui = ui.page_navbar(
         ui.nav_panel('Home2', ui.page_fluid('something')),
         ui.nav_spacer(),
         ui.nav_menu(
-            'Help',
+            ' Help', # space is intentional to avoid awkward alignment with icon
             'Navigation',
             ui.nav_panel('About {{ cookiecutter.package_name }}', ui.page_fluid('inspiration from Polars homepage')),
             ui.nav_panel('User Guide', ui.page_fluid('inspiration from Polars')),
@@ -31,7 +31,7 @@ app_ui = ui.page_navbar(
         )
     ],
     shinyswatch.get_theme("{{ cookiecutter.bootswatch_theme }}"),
-    title="{{ cookiecutter.bootswatch_theme }}",
+    title=ui.tags.b("{{ cookiecutter.package_name }}"),
     fluid=True,
     position='static-top'
 )
